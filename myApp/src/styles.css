@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+.navBarText1
+{
+   
+    margin-top: 10px; background:#000; height: 10px; 
+}
+.autoWa
+{
+    color:#3D4371;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.topMenu
+{
+    color:gray;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing:    1px;
+}
+
+.autoWaTxt
+{
+    color:#3D4371;
+    font-size: 25px;
+    font-family: 'Courier New';
+      margin-left: 0px;
+    font-weight: bold;
+    margin-top:10px;
+  
+}
+
+.aboutUS
+{
+    color:#3D4371;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+      margin-left: 0px;
+    font-weight: bold;
+}
+
+.yellow
+{
+    color: #FF5733;
+    font-weight: bold;
+}
+.yellowSmall
+{
+    color: #FF5733;
+    font-size: 12px;
+}
+.blackSmall
+{
+    color: gray;
+    font-size: 12px;
+}
+.mainContainer
+{
+  /*width: 900px;*/
+    background-color: #ffeee0;
+
+}
+.homeContainer
+{
+ width: 920px;
+  height: 500px;
+    background-color: #ffeee0;
+margin-top: 0px;
+padding: 10px;
+}
+.lowestCarPremiums
+{
+    background-color:white; 
+    width: 200px; 
+    height: 70px;
+    padding: 20px; 
+    color: #FF5733;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.lowestCarPremiums2
+{
+    background-color:white; 
+    width: 200px; 
+    height: 70px;
+    padding: 20px; 
+    color: #FF5733;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.parentImg {
+    display: flex;
+    flex-direction:row;
+    
+  }
+
+.parentText {
+    display: flex;
+    flex-direction:row;
+    width: 650px;
+  }
+  
+  .column {
+    flex: 1 1 0px;
+    /*border: 1px solid black;*/
+  }
+
+  .insuranceText
+  {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:12px;
+    color:gray;
+  }
+
+  .ContactUs
+{
+   
+    width: 200px; 
+    height: 70px;
+    padding: 20px; 
+    color: #fdfdfd;
+    font-size: 12px;
+  
+}
+.ContactUsContainer
+{
+ width: 900px;
+  height: 500px;
+    background-color: #00305a;
+margin-top: 0px;
+padding: 10px;
+}
+
+.contactUsText
+{
+    color: #fdfdfd;
+    font-size: 12px;
+}
+
+hr.newLine {
+    border: 1px solid #124c7e;
+  }
