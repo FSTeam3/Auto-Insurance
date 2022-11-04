@@ -60,16 +60,9 @@
 {
   /*width: 900px;*/
     background-color: #ffeee0;
+position: fixed;
+}
 
-}
-.homeContainer
-{
- width: 920px;
-  height: 500px;
-    background-color: #ffeee0;
-margin-top: 0px;
-padding: 10px;
-}
 .lowestCarPremiums
 {
     background-color:white; 
@@ -127,10 +120,34 @@ padding: 10px;
     font-size: 12px;
   
 }
+.homeContainer
+{
+ width: 920px;
+  height: 500px;
+    background-color: #ffeee0;
+margin-top: 0px;
+padding: 10px;
+}
+.aboutContainer
+{
+ width: 920px;
+  height: 400px;
+    background-color: #ffeee0;
+margin-top: 0px;
+padding: 10px;
+}
+.processContainer
+{
+ width: 920px;
+  height: 400px;
+    background-color: #ffeee0;
+margin-top: 0px;
+padding: 10px;
+}
 .ContactUsContainer
 {
- width: 900px;
-  height: 500px;
+ width: 920px;
+  height: 260px;
     background-color: #00305a;
 margin-top: 0px;
 padding: 10px;

@@ -6,7 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HomeComponent} from './home/home.component'
 import { ProcessComponent } from './Process/Process.component';
 const routes: Routes = [
-  {path: '',pathMatch:'full',redirectTo:'home'},
+  // {
+  //   path: '',pathMatch:'full',redirectTo:'home'},
   {
     component:HomeComponent,
     path:"home"

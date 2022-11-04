@@ -6,27 +6,29 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link autoWa">Autowa.</a></div>
         <div class="navbar-nav ">
-            <a class="nav-item nav-link" routerLink="home">Home</a>
-            <a class="nav-item nav-link" routerLink="about">About Us</a>
-            <a  class="nav-item nav-link" routerLink="process">Get Quote</a>
-            <a  class="nav-item nav-link" routerLink="contact">Contact Us</a>
+            <a class="nav-item nav-link" href="#home" routerLink="home">Home</a>
+            <a class="nav-item nav-link" href="#about">About Us</a>
+            <a  class="nav-item nav-link" href="#quote">Get Quote</a>
+            <a  class="nav-item nav-link" href="#contact">Contact Us</a>
             <Div>
               
             <a  class="nav-item nav-link"  style="margin-left: 190px"> Need Help? Call us
               <span class="yellow">1800 9876543</span>
                           </a>
                         </Div>
-            <!-- <div> 
-              
-               </div> -->
-        </div>
+               </div>
+               
         <div class="navbar-nav">
         
         </div>
+        
     </div>
+    
   </div>
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon">FGHFGHG</span>
-  </button> -->
+  
 </nav>
-<router-outlet></router-outlet>
+<app-home id="home"></app-home>
+<app-about id="about"></app-about>
+<app-process id="quote"></app-process>
+<app-contactus id="contact"></app-contactus>
+
