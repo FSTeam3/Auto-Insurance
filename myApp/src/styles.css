@@ -12,10 +12,11 @@
 .autoWa
 {
     color:#3D4371;
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 42px;
+    font-family: Rubik;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: -40px;
 }
 
 .topMenu
@@ -29,7 +30,7 @@
 .autoWaTxt
 {
     color:#3D4371;
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'rubik';
       margin-left: 0px;
     font-weight: bold;
@@ -50,16 +51,35 @@
 {
     color: #FF5733;
     font-weight: bold;
+    font-size: 60px;
+}
+.yellowNav
+{
+    color: #FF5733;
+    font-size: 26px;
+    font-family: Rubik;
+    font-weight: 700; 
+    font-style: normal;
 }
 .yellowSmall
 {
     color: #FF5733;
-    font-size: 12px;
+    font-size: 15px;
+}
+.navmenu
+{
+  color: #00305A;
 }
 .blackSmall
 {
     color: gray;
     font-size: 12px;
+}
+.bottomText
+{
+  font-weight: 400;
+    font-family: Roboto;
+    background-color: rgba(255, 255, 255, 0);
 }
 .mainContainer
 {
