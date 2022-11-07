@@ -36,8 +36,8 @@ zip="";
    if (this.fname =="") {
     this.toaster.error("First Name cannot be blank")
    }
-   else if (this.lastname =="") {
-    this.toaster.error("Last Name cannot be blank")
+   else if (this.email =="") {
+    this.toaster.error("Email cannot be blank")
    }
    else if (this.phoneno =="") {
     this.toaster.error("Phone-no cannot be blank")
