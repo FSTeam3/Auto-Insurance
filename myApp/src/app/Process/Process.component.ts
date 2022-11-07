@@ -16,7 +16,7 @@ export class ProcessComponent implements OnInit {
    searchText='';
    fname="";
    lastname ="";
-email ="";
+   qemail ="";
 phoneno="";
 state ="";
 zip="";
@@ -36,16 +36,13 @@ zip="";
    if (this.fname =="") {
     this.toaster.error("First Name cannot be blank")
    }
-   else if (this.email =="") {
-    this.toaster.error("Email cannot be blank")
-   }
+  //  else if (this.qemail =="") {
+  //   this.toaster.error("Email cannot be blank")
+  //  }
    else if (this.phoneno =="") {
     this.toaster.error("Phone-no cannot be blank")
    }
-   else if (this.email =="") {
-    this.toaster.error("Email Address cannot be blank")
-   }
-   else if (this.state =="") {
+    else if (this.state =="") {
     this.toaster.error("State cannot be blank")
    }
    else if (this.zip =="") {
