@@ -34,9 +34,18 @@
       margin-left: 0px;
     font-weight: bold;
     margin-top:100px;
+  text-align: center;
+}
+.autoWaTxtHome
+{
+    color:#3D4371;
+    font-size: 60px;
+    font-family: 'rubik';
+      margin-left: 0px;
+    font-weight: bold;
+    margin-top:0px;
   
 }
-
 .aboutUS
 {
     color:#3D4371;
@@ -120,6 +129,7 @@ position: fixed;
     display: flex;
     flex-direction:row;
     width: 650px;
+    margin-left: 30px;
   }
   
   .column {
