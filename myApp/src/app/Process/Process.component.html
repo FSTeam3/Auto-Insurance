@@ -1,94 +1,128 @@
-  <div class="processContainer">
-    <div class="QuoteBg">
+
+<div class="processContainer">
+  <div class="QuoteBg">
     <div class="autoWaTxt QuoteInner">
-        <p>
-         Get a Free Quote Now
-        </p>
-    </div>
-<form>
-  <div class="parentText">
-    <div class="column">
-        <span>
-          <input type="text" placeholder="Full Name" [(ngModel)]=fname 
-          name = "first" required minlength="4"  #first="ngModel"/> 
-        </span>
-        <span *ngIf="first.invalid && (first.dirty || first.touched)"  class="alert alert-danger" role="alert">
-          <span *ngIf="first.errors?.['required']" >
-            Name is required.
-          </span>
-          <span *ngIf="first.errors?.['minlength']">
-            Name must be at least 4 characters long.
-          </span>
-        </span>  
-    </div>
-    <div class="column">
-        <div>
-          <input type="text"  placeholder="E-mail" name="email" /> 
-        </div>
-        <!-- <div *ngIf="qemail.invalid && (qemail.dirty || qemail.touched)" class="alert">
-          <div *ngIf="qemail.errors?.['required']" >
-            Email is required.
-          </div>
-          <div *ngIf="qemail.errors?.['minlength']">
-            Name must be at least 4 characters long.
-          </div>
-        </div>   -->
-    </div>
-    <div class="column">  
-        <div>
-          <input type="text" placeholder="Phone Number" /> 
-        </div>
-    </div>
-</div>
-</form>
-   
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <!-- <img src="..." class="rounded me-2" alt="..."> -->
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
+      <p>
+       Get a Free Quote Now
+      </p>
   </div>
-</div>
-<br>
-<br>
-<br>
-
-
-<div class="parentText">
-  <div class="column">
-      <div>
-        <input type="text" placeholder="State"   style="width:200px; padding-right: 10px;" /> 
+<div class="register-form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Full Name"
+        formControlName="fullname"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"
+      />
+      <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+        <div *ngIf="f.fullname.errors.required">Fullname is required</div>
       </div>
-  </div>
-  <div class="column">
-      <div>
-        <input type="text"  placeholder="Zip Code"   style="width:200px; padding-right: 10px;" /> 
-      </div>
-  </div>
-  <div class="column">  
-    <button type="button" class="btn btn-primary" id="liveToastBtn" (click)  = "ClickEvent()">Submit</button>
-  </div>
-</div>
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-<div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    <img src="..." class="rounded me-2" alt="...">
-    <strong class="me-auto">Bootstrap</strong>
-    <small>11 mins ago</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-  </div>
-  <div class="toast-body">
-    Hello, world! This is a toast message.
-  </div>
-</div>
-</div>
-</div>
-  </div>
+    </div>
 
- 
+    <div class="form-group">
+    
+      <input
+        type="text"
+        placeholder="User Name"
+        formControlName="username"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+      />
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">Username is required</div>
+        <div *ngIf="f.username.errors.minlength">
+          Username must be at least 6 characters
+        </div>
+        <div *ngIf="f.username.errors.maxlength">
+          Username must not exceed 20 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+    
+      <input
+        type="text"
+        placeholder="Email"
+        formControlName="email"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+      />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email is invalid</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+    
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+      />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+        <div *ngIf="f.password.errors.minlength">
+          Password must be at least 6 characters
+        </div>
+        <div *ngIf="f.password.errors.maxlength">
+          Username must not exceed 40 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+    
+      <input
+        placeholder="Confirm Password"
+        type="password"
+        formControlName="confirmPassword"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+      />
+      <div
+        *ngIf="submitted && f.confirmPassword.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="f.confirmPassword.errors.required">
+          Confirm Password is required
+        </div>
+        <div *ngIf="f.confirmPassword.errors.matching">
+          Confirm Password does not match
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <input
+        type="checkbox"
+        formControlName="acceptTerms"
+        class="form-check-input"
+        [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
+      />
+      <label for="acceptTerms" class="form-check-label"
+        >I have read and agree to the Terms</label
+      >
+      <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">
+        Accept Terms is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Register</button>
+      <button
+        type="button"
+        (click)="onReset()"
+        class="btn btn-warning float-right"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
+  </div>

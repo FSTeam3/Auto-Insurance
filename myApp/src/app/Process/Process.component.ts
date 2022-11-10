@@ -1,57 +1,73 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { PipeTransform } from "@angular/core";
-import { ToastrService } from 'ngx-toastr';
-
+import { Component, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormBuilder,
+  FormArray,
+  FormControl,
+  Validators
+} from '@angular/forms';
+// import Validation from './utils/validation';
+import { AbstractControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-process',
   templateUrl: './process.component.html',
   styleUrls: ['./process.component.css']
 })
-
 export class ProcessComponent implements OnInit {
-  [x: string]: any;
+  form: FormGroup;
+  submitted = false;
 
-   //searchTerm:"vikas"
-   searchText='';
-   fname="";
-   lastname ="";
-   qemail ="";
-phoneno="";
-state ="";
-zip="";
-
-  constructor(private toaster:ToastrService) { }
+  constructor(private formBuilder: FormBuilder) {
+    
+  }
 
   ngOnInit(): void {
-
-    // this.customers = this.customers.filter(
-    //   book => book.name === this.search);
-      
+    this.form = this.formBuilder.group(
+      {
+        fullname: ['', Validators.required],
+        username: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(6),
+            Validators.maxLength(20)
+          ]
+        ],
+        email: ['', [Validators.required, Validators.email]],
+        password: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(6),
+            Validators.maxLength(40)
+          ]
+        ],
+        confirmPassword: ['', Validators.required],
+        acceptTerms: [false, Validators.requiredTrue]
+      },
+      {
+        //validators: [Validation.match('password', 'confirmPassword')]
+      }
+    );
   }
 
-    ClickEvent(){
-    // this.toaster.success(this.fname) 
-    
-   if (this.fname =="") {
-    this.toaster.error("First Name cannot be blank")
-   }
-  //  else if (this.qemail =="") {
-  //   this.toaster.error("Email cannot be blank")
-  //  }
-   else if (this.phoneno =="") {
-    this.toaster.error("Phone-no cannot be blank")
-   }
-    else if (this.state =="") {
-    this.toaster.error("State cannot be blank")
-   }
-   else if (this.zip =="") {
-    this.toaster.error("Zip no cannot be blank")
-   }
-   else
-   this.toaster.success("Details Submitted Sucessfully")
+  get f(): { [key: string]: AbstractControl } {
+    return this.form.controls;
   }
-    // var fname:any = this.firstname 
-    // if ()
-      
+
+  onSubmit(): void {
+    this.submitted = true;
+
+    if (this.form.invalid) {
+      return;
+    }
+
+    console.log(JSON.stringify(this.form.value, null, 2));
+  }
+
+  onReset(): void {
+    this.submitted = false;
+    this.form.reset();
+  }
 }
