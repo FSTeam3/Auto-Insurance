@@ -34,3 +34,16 @@ p {
 {
   padding-bottom: 10px;
 }
+
+.toast-container
+{
+  pointer-events: none !important;
+    position: fixed;
+    z-index: 999999;
+    
+}
+
+.toast-top-right {
+  top: 5%!important;
+  right: 20% !important;
+}

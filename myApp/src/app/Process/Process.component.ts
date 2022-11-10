@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormGroup,
   FormBuilder,
@@ -18,8 +19,8 @@ export class ProcessComponent implements OnInit {
   form: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
-    
+  constructor(private formBuilder: FormBuilder, private toaster: ToastrService) {
+
   }
 
   ngOnInit(): void {
@@ -58,9 +59,12 @@ export class ProcessComponent implements OnInit {
 
   onSubmit(): void {
     this.submitted = true;
-
+  
     if (this.form.invalid) {
       return;
+    }
+    else {
+      this.toaster.success("Details Submitted Sucessfully")
     }
 
     console.log(JSON.stringify(this.form.value, null, 2));
