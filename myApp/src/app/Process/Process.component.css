@@ -47,3 +47,9 @@ p {
   top: 5%!important;
   right: 20% !important;
 }
+
+.parentQuoteText {
+  display: flex;
+  flex-direction:row;
+   margin-left: 30px;
+}

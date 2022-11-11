@@ -27,12 +27,22 @@ export class ProcessComponent implements OnInit {
     this.form = this.formBuilder.group(
       {
         fullname: ['', Validators.required],
+        state: ['', Validators.required],
+        zipcode: ['', Validators.required],
         username: [
           '',
           [
             Validators.required,
             Validators.minLength(6),
             Validators.maxLength(20)
+          ]
+        ],
+        phoneNumber: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(10),
+            Validators.maxLength(10)
           ]
         ],
         email: ['', [Validators.required, Validators.email]],
@@ -59,7 +69,7 @@ export class ProcessComponent implements OnInit {
 
   onSubmit(): void {
     this.submitted = true;
-  
+  //  this.toaster.success("Details Submitted Sucessfully")
     if (this.form.invalid) {
       return;
     }
@@ -67,7 +77,7 @@ export class ProcessComponent implements OnInit {
       this.toaster.success("Details Submitted Sucessfully")
     }
 
-    console.log(JSON.stringify(this.form.value, null, 2));
+   // console.log(JSON.stringify(this.form.value, null, 2));
   }
 
   onReset(): void {
