@@ -36,16 +36,6 @@
     margin-top:100px;
   text-align: center;
 }
-.autoWaTxtHome
-{
-    color:#3D4371;
-    font-size: 60px;
-    font-family: 'rubik';
-      margin-left: 0px;
-    font-weight: bold;
-    margin-top:0px;
-  
-}
 .aboutUS
 {
     color:#3D4371;
@@ -179,4 +169,5 @@ padding: 10px;
 
 hr.newLine {
     border: 1px solid #124c7e;
+    margin-right: 260px;
   }

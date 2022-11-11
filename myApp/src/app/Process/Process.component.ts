@@ -29,14 +29,14 @@ export class ProcessComponent implements OnInit {
         fullname: ['', Validators.required],
         state: ['', Validators.required],
         zipcode: ['', Validators.required],
-        username: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(20)
-          ]
-        ],
+        // username: [
+        //   '',
+        //   [
+        //     Validators.required,
+        //     Validators.minLength(6),
+        //     Validators.maxLength(20)
+        //   ]
+        // ],
         phoneNumber: [
           '',
           [
@@ -46,15 +46,15 @@ export class ProcessComponent implements OnInit {
           ]
         ],
         email: ['', [Validators.required, Validators.email]],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(40)
-          ]
-        ],
-        confirmPassword: ['', Validators.required],
+        // password: [
+        //   '',
+        //   [
+        //     Validators.required,
+        //     Validators.minLength(6),
+        //     Validators.maxLength(40)
+        //   ]
+        // ],
+        // confirmPassword: ['', Validators.required],
         acceptTerms: [false, Validators.requiredTrue]
       },
       {
